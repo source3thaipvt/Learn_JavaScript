@@ -1,6 +1,6 @@
 - Thuat ngu ( terms ) la gi? là chỉ khái niệm về 1 vật , 1 văn bản, hay đời sống thường ngày
 Thuật ngữ trong lập trình gồm: 
 Biến (variable),
- Mảng (Array)
-  Kiểu Dữ liệu (Data type),
-   Hàm(Function)
+Mảng (Array)
+Kiểu Dữ liệu (Data type),
+Hàm(Function)
