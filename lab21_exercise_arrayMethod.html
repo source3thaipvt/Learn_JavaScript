@@ -1,0 +1,79 @@
+<!-- //Excercise Bài tập tổng quan về array Methods vào thực tế -->
+<!DOCTYPE html>
+<html>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <title>HTML Tutorial</title>
+
+    <body style="padding: 16px;">
+        <div class="row">
+            <div class="col form-group">
+                <label for="genderFillter">Gender</label>
+                <select class="form-control" id="genderFillter">
+                    <option value="null">All</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <p id="sumPrice">Gender</p>
+            </div>
+        </div>
+        <ul class="list-group" id="userList">
+            <li class="list-group-item"> dsadsa </li>
+        </ul>
+
+    </body>
+    <script>
+        var users = [
+            { name: 'Tam', gender: 'female', price: 40 },
+            { name: 'Thanh', gender: 'male', price: 80 },
+            { name: 'Sang', gender: 'female', price: 20 },
+            { name: 'Teo', gender: 'male', price: 50 },
+            { name: 'Tao', gender: 'male', price: 90 },
+        ];
+        var userList = $('#userList');
+        var genderFillter = $('#genderFillter');
+        var sumPrices = $('#sumPrice');
+        var sumPrice = document.getElementById('sumPrice');
+        // bai tap them
+        function render() {
+            var mapPrice = users.map(function (x) {
+                return x.price;
+            });
+            console.log(mapPrice);
+            var reducePrice = mapPrice.reduce(function (a, b) {
+                return a + b;
+            });
+            console.log(reducePrice);
+            var text = '<h1 class="sumPrice">' + reducePrice + '</h1>';
+            var html = text.join('');
+            container.innerHTML = html;
+        }
+
+
+        render(userList, users);
+
+        // loc
+        genderFillter.on('change', function () {
+            var selectGender = this.value;
+            var filteredUsers = users.filter(function (user) {
+                return user.gender === selectGender;
+            });
+            render(userList, filteredUsers);
+        });
+        // hien thi list
+        function render(container, item) {
+            var listItemUser = item.map(function (item) {
+                return '<li class="list-group-item">' + item.name + '</li>';
+
+            });
+            //litsItemUser = []
+            var html = listItemUser.join('');
+            container.html(html);
+        }
+
+    </script>
+
+</html>
