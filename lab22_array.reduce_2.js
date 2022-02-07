@@ -42,22 +42,27 @@ var items = ['Tam', 'Bill', 'Kim'];
 // dung string noi chuoi
 console.log('<'+'Bill'+'>')
 items.reduce(function(a,b){
-    const returns = '<'+a+'>'+'<'+b+'>'
-    console.log(returns)
+    const returns = a+'<'+b+'>'
+    const test = a +  '<'.concat(b).concat('>')
+    console.log(test,'use reduce test')
+    console.log(test,'use reduce')
     return returns;
-})
-//2. use map
+},"")
+//2. use map va join
+//  use join: tạo và trả về 1 chuỗi được ngăn cách bởi dấu phẩy
 const map = items.map(function(x, index){
     const returns = '<'+x+'>'
     console.log(returns, index)
     return returns;
 })
-console.log(map)
+console.log(map,'map')
 //<Tam> 0
 //<Bill> 1
 //<Kim> 2
+let joinMap = map.join('')
+console.log(joinMap,'join map')
 
-// 3. use join: tạo và trả về 1 chuỗi được ngăn cách bởi dấu phẩy
+//  use join: tạo và trả về 1 chuỗi được ngăn cách bởi dấu phẩy
 console.log(items.join())
 //Tam,Bill,Kim
 console.log(items.join('<'+''+'>'))
