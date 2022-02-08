@@ -1,0 +1,7 @@
+Hướng dẫn cài đặt nodeJS || Sublime Text 3
+
+https://www.youtube.com/watch?v=XNBA8dXllJc&list=PLkY6Xj8Sg8-uPZnTdScfuH0xD-O6Kb-V-&index=29
+
+Đã cài đặt nodeJS version v16.13.0
+
+Cài đặt ubuntu terminal: hệ điều hành máy ảo ubuntu < ĐÃ Cài>
