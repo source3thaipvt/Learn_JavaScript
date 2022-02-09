@@ -1,5 +1,23 @@
 {
   "dependencies": {
-    "chalk": "^5.0.0"
-  }
+    "chalk": "^5.0.0",
+    "readline-sync": "^1.4.10"
+  },
+  "name": "lession_1",
+  "description": "Bat dau vao hocj javaScript taij coders-x TokyO\r https://school.coders-x.com/courses/5b8a1d261a383514ba715fc8/lessons/5b8a1ec41a383514ba715fcd",
+  "version": "1.0.0",
+  "main": "lab10_function.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/learn_javascript/learnjavascriptbasic_codertokyo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/learn_javascript/learnjavascriptbasic_codertokyo/issues"
+  },
+  "homepage": "https://gitlab.com/learn_javascript/learnjavascriptbasic_codertokyo#readme"
 }
