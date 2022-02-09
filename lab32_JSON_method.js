@@ -25,9 +25,9 @@ while(att) {
     var answer = parseInt(readlineSync.question('Choose your question: '));
     switch(answer) {
         case 1: 
-            var a = fs.readFileSync("data.JSON", "utf8")
-            studentObject = JSON.parse(a)
-            console.log(typeof studentObject);
+            var read = fs.readFileSync("data.JSON", "utf8")
+            studentObject = JSON.parse(read)
+            console.log(studentObject);
             break;
         case 2: 
             var name = readlineSync.question('Your name: ');
@@ -41,7 +41,7 @@ while(att) {
             break;
         case 3:  
             var studentString = JSON.stringify(students);
-            var save = fs.writeFileSync("data.JSON", studentString);
+            var write = fs.writeFileSync("data.JSON", studentString);
             console.log('Save successfully');
             att = false;
             break;
