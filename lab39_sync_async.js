@@ -3,13 +3,13 @@
 
 var fs = require('fs')
 
-// console.log('Start')
-// // ReadfileSync: doc file dong bo
-// var song1 = fs.readFileSync('./storage/song.txt',{encoding: 'utf8'})
-// console.log(song1)
-// var song2 = fs.readFileSync('./storage/song2.txt',{encoding: 'utf8'})
-// console.log(song2)
-// console.log('End')
+console.log('Start')
+// ReadfileSync: doc file dong bo
+var song1 = fs.readFileSync('./storage/song.txt',{encoding: 'utf8'})
+console.log(song1)
+var song2 = fs.readFileSync('./storage/song2.txt',{encoding: 'utf8'})
+console.log(song2)
+console.log('End')
 
 // Start
 // Hello Word
