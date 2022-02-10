@@ -4,7 +4,8 @@
     "co": "^4.6.0",
     "moment": "^2.29.1",
     "promise-fs": "^2.1.1",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "table": "^6.8.0"
   },
   "name": "lession_1",
   "description": "Bat dau vao hocj javaScript taij coders-x TokyO\r https://school.coders-x.com/courses/5b8a1d261a383514ba715fc8/lessons/5b8a1ec41a383514ba715fcd",
