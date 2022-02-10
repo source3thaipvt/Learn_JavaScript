@@ -42,17 +42,16 @@ var fss = require("fs");
 function readFilePromise(path) {
   return new Promise(function (resolve, reject) {
     fss.readFile(path, { encoding: "utf8" }, function (err, data) {
-        
+        // Phai tra ve Promise mới gọi được hàm .then()
+        // resolve: được gọi khi hàm function thực hiện xong(khi đọc file xong rồi)|| những gì resolve sẽ truyền vào .then()
+        // reject: là hàm báo lỗi                                                  || những gì reject sẽ truyền vào .catch() 
         if(err){
             reject(err)
         }else{
             resolve(data)
         }
     });
-  });
-  // Phai tra ve Promise mới gọi được hàm .then()
-  // resolve: được gọi khi hàm function thực hiện xong(khi đọc file xong rồi)|| những gì resolve sẽ truyền vào .then()
-  // reject: là hàm báo lỗi                                                  || những gì reject sẽ truyền vào .catch()      
+  });     
 }
 readFilePromise("./storage/song.txt")
     
