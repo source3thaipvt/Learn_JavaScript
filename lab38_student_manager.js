@@ -38,18 +38,18 @@ function loadData(){
 
 function showStudents(){
     for( var student of students){
-        console.log(student.name, student.age, (student.gender===2) ? 'female': 'male')
+        console.log(student.name, student.age, (!student.gender) ? 'female': 'male')
     }
 }
 function showCreateStudent(){
     var name = readlineSync.question('Name: ')
     var age = readlineSync.question('Age: ')
-    var gender = readlineSync.question('Neu ban la Nam chon 1 or Nu chon 2: ')
+    var gender = readlineSync.keyInYN('Neu ban la Nam chon Y or Nu chon N: ')
     console.log(gender)
     var student = {
         name: name,
         age: parseInt(age),
-        gender: parseInt(gender)
+        gender: gender
     }
     students.push(student)
     
